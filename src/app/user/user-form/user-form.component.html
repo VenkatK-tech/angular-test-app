@@ -1,0 +1,14 @@
+
+
+<div>
+  <h1>User Form</h1>
+  <form (submit)="onSubmit()" [formGroup]="userForm" >
+    <input type="text" placeholder="Name" name="name" formControlName="name" />
+    <input type="email" placeholder="Name" name="email" formControlName="email"/>
+    <!-- User: {{ fieldValue.value }} -->
+    <button type="submit">Submit</button>
+  </form>
+  @for(user of users; track user.id) {
+    <p>{{user.name}}</p>
+  }
+</div>

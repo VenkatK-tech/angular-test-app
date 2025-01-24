@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <h1> User list</h1>
+    
+    <button (click)="createUser()">Create User</button>
+    @for(user of users; track user.id) {
+      <p>
+      <span>{{user.name}} </span>
+       
+      
+      <a [routerLink]="['/user/user-form', user.id]">Open</a>
+      </p>
+    }
+    <main>
+    </main>
+  </div>
+</div>
